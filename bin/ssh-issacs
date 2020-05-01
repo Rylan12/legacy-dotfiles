@@ -1,0 +1,32 @@
+#!/bin/sh
+
+FILES="$(echo $(aws s3 ls s3://issacs-gpr-dev/ | grep "ip_.*.txt" | sort -r | awk '{print $4}' | sed 's/^ip_\(.*\)\.txt/\1/'))"
+FILES="$FILES EC2"
+PS3='Choose Box: '
+
+select FILE in $FILES
+do
+    if [ ! -z $FILE ]
+    then
+        if [ "$FILE" = "EC2" ]
+        then
+            FILE="EC2"
+        else
+            FILE="ip_$FILE.txt"
+        fi
+        break
+    fi
+done
+
+if [ "$FILE" = "EC2" ]
+then
+    #IP="$(aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output=text)"
+    SSHHOST="issacs-ec2"
+else
+    IP=$(aws s3 cp s3://issacs-gpr-dev/$FILE -)
+    gsed -i.bak "/Host issacs-box/{n;s/.*/    Hostname $IP/}" "$HOME/.ssh/config"
+    SSHHOST="issacs-box"
+fi
+
+printf "\n\e[32mssh\e[0m $SSHHOST\n"
+ssh $SSHHOST

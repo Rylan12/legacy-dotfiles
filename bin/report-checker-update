@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /Users/rylanpolster/RiderProjects/Report\ Checker
+git pull origin master
+git pull origin master --tags
+git push github master
+git push github master --tags

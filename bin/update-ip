@@ -1,0 +1,51 @@
+#!/bin/bash
+
+IFS=
+ammoOpt=true
+pibakeryOpt=true
+splitPattern=".+ .+"
+filePath=/etc/hosts
+
+cp $filePath $HOME/update-ip-backup/
+
+while getopts :aApP opt; do
+	case $opt in
+		[aA]) pibakeryOpt=false;;
+		[pP]) ammoOpt=false;;
+		*) echo "$0; illegal option $1"; exit 1;;
+	esac
+done
+
+if [ "$ammoOpt" = false ] && [ "$pibakeryOpt" = false ]; then
+	echo "$0: illegal option combination $1";
+	exit 1;
+fi
+
+if [ "$ammoOpt" = true ]; then
+	ammoIP=$(aws s3 cp s3://issacs-gpr-dev/ip_ammobox -);
+
+	if [[ $ammoIP =~ $splitPattern ]]; then
+		ammoIP=$(echo $ammoIP | awk '{print $2}');
+	fi
+
+	fileText=$(cat $filePath)
+	fileText=$(echo $fileText | sed -E "s/^[0-9\.]+[[:space:]]+AmmoBox$/${ammoIP}"$'\tAmmoBox/') 
+       	echo $fileText | tee $filePath > /dev/null
+fi
+
+if [ "$pibakeryOpt" = true ]; then
+	pibakeryIP=$(aws s3 cp s3://issacs-gpr-dev/pibakery_ip -);
+
+	if [[ $pibakeryIP =~ $splitPattern ]]; then
+		pibakeryIP=$(echo $pibakeryIP | awk '{print $2}');
+	fi
+
+	fileText=$(cat $filePath)
+	fileText=$(echo $fileText | sed -E "s/^[0-9\.]+[[:space:]]+PiBakery$/${pibakeryIP}"$'\tPiBakery/')
+       	echo $fileText | tee $filePath > /dev/null
+fi
+
+message="Updated IP Address"
+if [ "$ammoOpt" = true ] && [ "$pibakeryOpt" = true ]; then
+	message=$message"es";
+fi

@@ -1,0 +1,29 @@
+#!/bin/bash
+BOXNAME=$(echo "$*" | xargs)
+
+if [ -z "$BOXNAME" ]; then
+    echo "Usage: $0 box_name"
+    exit 1
+fi
+
+BOXNAME=$(echo ${BOXNAME// /_})
+
+ACCESS_KEY_LIST="$(aws iam list-access-keys --user-name "$BOXNAME")"
+ACCESS_KEY_LIST=$(echo "$ACCESS_KEY_LIST" | jq '.AccessKeyMetadata' | jq '.[].AccessKeyId' | sed -e 's/^"//' -e 's/"$//')
+for ACCESS_KEY in $ACCESS_KEY_LIST
+do
+    echo "Removing Access Key: $ACCESS_KEY"
+    aws iam delete-access-key --access-key "$ACCESS_KEY" --user-name "$BOXNAME"
+done
+
+GROUP_LIST="$(aws iam list-groups-for-user --user-name "$BOXNAME")"
+GROUP_LIST=$(echo "$GROUP_LIST" | jq '.Groups' | jq '.[].GroupName' | sed -e 's/^"//' -e 's/"$//')
+for GROUP in $GROUP_LIST
+do
+    echo "Removing Group: $GROUP"
+    aws iam remove-user-from-group --user-name "$BOXNAME" --group-name "$GROUP"
+done
+
+echo "Deleting User: $BOXNAME"
+aws iam delete-user --user-name $BOXNAME > /dev/null 2>&1
+aws s3 rm s3://issacs-gpr-dev/ip_"$BOXNAME".txt > /dev/null 2>&1

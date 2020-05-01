@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /Users/rylanpolster/.gpg-sign-repo/
+
+MESSAGE="gpg sign: `date`"
+
+echo $MESSAGE >> gpg-sign-log.txt
+
+git add gpg-sign-log.txt
+git commit -S -m "$MESSAGE"

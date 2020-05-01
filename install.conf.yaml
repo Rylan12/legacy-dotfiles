@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.inputrc:
+    ~/.shell:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
+    ~/bin: bin/
+
