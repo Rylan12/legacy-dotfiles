@@ -2,7 +2,7 @@
 
 cd /Users/rylanpolster/.gpg-sign-repo/
 
-MESSAGE="gpg sign: `date`"
+MESSAGE="gpg sign: $(date)"
 
 echo $MESSAGE >> gpg-sign-log.txt
 
