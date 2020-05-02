@@ -15,6 +15,9 @@ dfu() {
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 
+# dotfiles
+alias dotfiles='git -C ~/.dotfiles'
+
 # Create a directory and cd into it
 mcd() {
     mkdir "${1}" && cd "${1}"

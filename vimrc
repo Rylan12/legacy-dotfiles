@@ -8,6 +8,7 @@ set hidden " Allow hidden buffers
 set noerrorbells visualbell t_vb= " Disable audible bell because it's annoying.
 set mouse+=a " Enable mouse support
 set wildmenu " Show autocomplete for commands
+set ttimeoutlen=10 " Remove delay when pressing <Esc>
 
 
 " ------
@@ -21,6 +22,7 @@ set splitbelow " New window appears below
 set splitright " New window appears to the right
 
 set laststatus=2 " Always show the status line
+set noshowmode " Don't show current mode (shown in lightline plugin)
 set ruler " Show mouse position on status line
 
 set wrap " Enable line wrapping
@@ -133,14 +135,29 @@ autocmd FileType gitcommit highlight ColorColumn ctermbg=0
 " -------
 
 " NERDTree
-" --------
-" NERDTree starts automatically when no file specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" <C-n> starts NERDTree
 map <C-n> :NERDTreeToggle<CR>
 " Close vim if NERDTree is left open by itself
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" CtrlP
+" -----
+let g:ctrlp_show_hidden = 1 " Show hidden files
+
+" Gundo
+" -----
+nnoremap <F5> :GundoToggle<CR>
+if has('python3')
+    let g:gundo_prefer_python3 = 1 " Anything else breaks on Ubuntu 16.04+
+endif
+
+" Lightline
+" Themes: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
+" let g:lightline = {
+"       \ 'colorscheme': 'simpleblack',
+"       \ }
+
+" ArgWrap
+nnoremap <silent> <leader>w :ArgWrap<CR>
 
 
 " --------------------
