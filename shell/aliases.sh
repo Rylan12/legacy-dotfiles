@@ -68,5 +68,12 @@ up()
     cd "${cdir}"
 }
 
+# Execute a command in a specific directory
+xin() {
+    (
+        cd "${1}" && shift && ${@}
+    )
+}
+
 # watch colors
 alias watch="watch -c"
