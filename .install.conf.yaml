@@ -20,5 +20,5 @@
     ~/bin: bin/
 
 - shell:
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
+    - [git submodule sync --recursive, Syncing submodules]
+    - [git submodule update --init --recursive, Updating submodules]
