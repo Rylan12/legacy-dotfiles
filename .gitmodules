@@ -5,44 +5,44 @@
 [submodule "vim/pack/vendor/start/nerdtree"]
 	path = vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/ack.vim"]
 	path = vim/pack/vendor/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/ctrlp.vim"]
 	path = vim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/gundo.vim"]
 	path = vim/pack/vendor/start/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/lightline.vim"]
 	path = vim/pack/vendor/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/nerdcommenter"]
 	path = vim/pack/vendor/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/vim-argwrap"]
 	path = vim/pack/vendor/start/vim-argwrap
 	url = https://github.com/FooSoft/vim-argwrap.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/vim-buffergator"]
 	path = vim/pack/vendor/start/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/vim-surround"]
 	path = vim/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/vim-fugitive"]
 	path = vim/pack/vendor/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-    ignore = untracked
+	ignore = untracked
 [submodule "vim/pack/vendor/start/supertab"]
 	path = vim/pack/vendor/start/supertab
 	url = https://github.com/ervandew/supertab.git
-    ignore = untracked
+	ignore = untracked
