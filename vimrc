@@ -9,6 +9,7 @@ set noerrorbells visualbell t_vb= " Disable audible bell because it's annoying.
 set mouse+=a " Enable mouse support
 set wildmenu " Show autocomplete for commands
 set ttimeoutlen=10 " Remove delay when pressing <Esc>
+set showcmd " Show commands for some actions
 
 
 " ------
