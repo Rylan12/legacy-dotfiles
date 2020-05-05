@@ -159,6 +159,11 @@ endif
 " ArgWrap
 nnoremap <silent> <leader>w :ArgWrap<CR>
 
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context" " Complete files after / and methods after .
+let g:SuperTabCrMapping = 1 " Enter ends the completion menu
+let g:SuperTabClosePreviewOnPopupClose = 1 " Close the completion window that vim opens when done
+
 
 " --------------------
 " Local customizations

@@ -42,3 +42,7 @@
 	path = vim/pack/vendor/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
     ignore = untracked
+[submodule "vim/pack/vendor/start/supertab"]
+	path = vim/pack/vendor/start/supertab
+	url = https://github.com/ervandew/supertab.git
+    ignore = untracked
