@@ -5,18 +5,18 @@ alias mv='mv -i'
 # Change permission
 alias cx='chmod +x'
 
-# Update dotfiles
+# cd to git root directory
+alias cdgr='cd "$(git root)"'
+
+# dotfiles
+alias cddf='cd ~/.dotfiles'
+alias dotfiles='git -C ~/.dotfiles'
+alias dfs='git -C ~/.dotfiles status'
 dfu() {
     (
         cd ~/.dotfiles && git pull --ff-only && ./install -q
     )
 }
-
-# cd to git root directory
-alias cdgr='cd "$(git root)"'
-
-# dotfiles
-alias dotfiles='git -C ~/.dotfiles'
 
 # Create a directory and cd into it
 mcd() {
