@@ -8,6 +8,9 @@ alias cx='chmod +x'
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 
+# Create and source virtual environment
+alias venv='virtualenv venv && source venv/bin/activate'
+
 # dotfiles
 alias cddf='cd ~/.dotfiles'
 alias dotfiles='git -C ~/.dotfiles'
