@@ -46,3 +46,6 @@
 	path = vim/pack/vendor/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = untracked
+[submodule "zsh/plugins/pure"]
+	path = zsh/plugins/pure
+	url = https://github.com/sindresorhus/pure.git

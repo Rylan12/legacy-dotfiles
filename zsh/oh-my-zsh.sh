@@ -9,7 +9,8 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="af-magic"
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +71,8 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # NOTE: zsh-syntax-highlighting should be last
-plugins=(colored-man-pages git osx thefuck tmux virtualenv zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
+#plugins=(colored-man-pages git osx thefuck tmux virtualenv zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(colored-man-pages git osx thefuck zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

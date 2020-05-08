@@ -20,6 +20,9 @@ source ~/.shell/external.sh
 # Aliases
 source ~/.shell/aliases.sh
 
+# External plugins (initialized after)
+source ~/.zsh/plugins_after.zsh
+
 # oh-my-zsh if installed
 if [ -d ~/.oh-my-zsh ]; then
     source ~/.zsh/oh-my-zsh.sh
