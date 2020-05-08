@@ -19,6 +19,7 @@
     ~/.zsh:
     ~/.zshrc:
     ~/bin: bin/
+    ~/scripts: scripts/
 
 - shell:
     - [git submodule sync --recursive, Syncing submodules]
