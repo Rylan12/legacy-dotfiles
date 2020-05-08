@@ -128,7 +128,7 @@ autocmd FileType gitcommit set colorcolumn=+1
 autocmd FileType gitcommit set colorcolumn+=51
 
 " Change color column color to black
-autocmd FileType gitcommit highlight ColorColumn ctermbg=0
+autocmd FileType gitcommit highlight ColorColumn ctermbg=DarkGray
 
 
 " -------
