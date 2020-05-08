@@ -13,6 +13,7 @@
     ~/.gitignore_global:
     ~/.inputrc:
     ~/.shell:
+    ~/.tmux.conf:
     ~/.vim:
     ~/.vimrc:
     ~/.zsh:
