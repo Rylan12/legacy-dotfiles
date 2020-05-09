@@ -2,6 +2,9 @@
 	path = .dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "zsh/plugins/pure"]
+	path = zsh/plugins/pure
+	url = https://github.com/sindresorhus/pure.git
 [submodule "vim/pack/vendor/start/nerdtree"]
 	path = vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
@@ -46,6 +49,43 @@
 	path = vim/pack/vendor/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = untracked
-[submodule "zsh/plugins/pure"]
-	path = zsh/plugins/pure
-	url = https://github.com/sindresorhus/pure.git
+[submodule "vim/pack/vendor/start/vim-gitgutter"]
+	path = vim/pack/vendor/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-easymotion"]
+	path = vim/pack/vendor/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/incsearch.vim"]
+	path = vim/pack/vendor/start/incsearch.vim
+	url = https://github.com/haya14busa/incsearch.vim.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/incsearch-fuzzy.vim"]
+	path = vim/pack/vendor/start/incsearch-fuzzy.vim
+	url = https://github.com/haya14busa/incsearch-fuzzy.vim
+	ignore = untracked
+[submodule "vim/pack/vendor/start/incsearch-easymotion.vim"]
+	path = vim/pack/vendor/start/incsearch-easymotion.vim
+	url = https://github.com/haya14busa/incsearch-easymotion.vim.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/syntastic"]
+	path = vim/pack/vendor/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/python-syntax"]
+	path = vim/pack/vendor/start/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/SimpylFold"]
+	path = vim/pack/vendor/start/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/FastFold"]
+	path = vim/pack/vendor/start/FastFold
+	url = https://github.com/Konfekt/FastFold.git
+	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-snazzy"]
+	path = vim/pack/vendor/start/vim-snazzy
+	url = https://github.com/connorholyday/vim-snazzy.git
+	ignore = untracked

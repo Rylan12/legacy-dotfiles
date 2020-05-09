@@ -10,6 +10,8 @@ set mouse+=a " Enable mouse support
 set wildmenu " Show autocomplete for commands
 set ttimeoutlen=10 " Remove delay when pressing <Esc>
 set showcmd " Show commands for some actions
+set updatetime=100 " Update more quickly
+colorscheme snazzy
 
 
 " ------
@@ -30,17 +32,18 @@ set wrap " Enable line wrapping
 set linebreak " Won't linebreak in the middle of a word
 
 set backspace=indent,eol,start " Allow backspace past insert point and over new line
-set scrolloff=5 " Keep 5 lines under cursor at top and bottom of screen
+set scrolloff=3 " Keep 5 lines under cursor at top and bottom of screen
 
 
 " ----------------------
 " Syntax and Indentation
 " ----------------------
 
-let g:is_posix = 1 " sh is a POSIX shell (fixes wrong syntax highlighting for $()
 filetype plugin indent on " Detect file type and indent automatically
 syntax on " Enable syntax highlighting
 set showmatch " Show matching {[()]}
+let g:is_posix = 1 " sh is a POSIX shell (fixes wrong syntax highlighting for $()
+let g:python_highlight_all = 1
 
 " Indentation
 set tabstop=4 " Indent 4 spaces
@@ -52,9 +55,9 @@ set shiftround " Shifting rounds to multiple of 'shiftwidth'
 set smarttab " TAB inserts 'tabstop' number of spaces
 
 " Code Folding
-set foldmethod=indent " Fold based on indentation
 set foldlevel=20 " Have most folds open on start
 set nofoldenable
+
 
 
 " ------
@@ -69,9 +72,6 @@ set hlsearch " Highlight all instances found in search
 " -----------
 " Keybindings
 " -----------
-
-" Enable folding with the spacebar
-nnoremap <space> za
 
 " Don't enter Ex mode when pressing Q 
 nmap Q <Nop>
@@ -103,15 +103,12 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-
-" -------
-" vimdiff
-" -------
-if &diff
-    map ] ]c
-    map [ [c
-    " TODO: Add colorscheme for vimdiff
-endif
+" Common mistyped commands
+command! WQ wq
+command! Wq wq
+command! Wqa wqa
+command! W w
+command! Q q
 
 
 " ------------
@@ -135,35 +132,79 @@ autocmd FileType gitcommit highlight ColorColumn ctermbg=DarkGray
 " Plugins
 " -------
 
-" NERDTree
-map <silent> <C-n> :NERDTreeToggle<CR>
-" Close vim if NERDTree is left open by itself
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" ArgWrap
+nnoremap <silent> <leader>a :ArgWrap<CR>
 
 " CtrlP
-" -----
 let g:ctrlp_show_hidden = 1 " Show hidden files
 
+" Easymotion
+let g:EasyMotion_smartcase = 1
+map <Space> <Plug>(easymotion-prefix)
+map <Space>l <Plug>(easymotion-bd-jk)
+nmap <Space>L <Plug>(easymotion-overwin-line)
+
+" GitGutter
+highlight! link SignColumn LineNr
+
 " Gundo
-" -----
 nnoremap <silent> <F5> :GundoToggle<CR>
 if has('python3')
     let g:gundo_prefer_python3 = 1 " Anything else breaks on Ubuntu 16.04+
 endif
 
-" Lightline
-" Themes: https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
-" let g:lightline = {
-"       \ 'colorscheme': 'simpleblack',
-"       \ }
+" Incsearch
+let g:incsearch#auto_nohlsearch = 1
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
+map <Space>/ <Plug>(incsearch-easymotion-/)
+map <Space>? <Plug>(incsearch-easymotion-?)
+map <Space>g/ <Plug>(incsearch-easymotion-stay)
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
-" ArgWrap
-nnoremap <silent> <leader>w :ArgWrap<CR>
+" Lightline
+let g:lightline = {
+\ 'colorscheme': 'snazzy',
+\ }
+
+" NERDTree
+map <silent> <C-n> :NERDTreeToggle<CR>
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" SimpylFold
+let g:SimpylFold_docstring_preview = 1
 
 " SuperTab
-let g:SuperTabDefaultCompletionType = "context" " Complete files after / and methods after .
+let g:SuperTabDefaultCompletionType = 'context' " Complete files after / and methods after .
 let g:SuperTabCrMapping = 1 " Enter ends the completion menu
 let g:SuperTabClosePreviewOnPopupClose = 1 " Close the completion window that vim opens when done
+
+" Syntastic
+let g:syntastic_error_symbol = 'x'
+let g:syntastic_warning_symbol = "!"
+let g:syntastic_style_error_symbol = 's'
+let g:syntastic_style_warning_symbol = "s"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+    \ 'mode': 'passive',
+    \ 'active_filetypes': ['sh', 'python', 'zsh'],
+    \ 'passive_filetypes': []
+\}
+nnoremap <Leader>sc :SyntasticCheck<CR>
+nnoremap <Leader>sr :SyntasticReset<CR>
+nnoremap <Leader>si :SyntasticInfo<CR>
+nnoremap <Leader>sm :SyntasticToggleMode<CR>
 
 
 " --------------------
