@@ -136,7 +136,7 @@ autocmd FileType gitcommit highlight ColorColumn ctermbg=DarkGray
 " -------
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <silent> <C-n> :NERDTreeToggle<CR>
 " Close vim if NERDTree is left open by itself
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -146,7 +146,7 @@ let g:ctrlp_show_hidden = 1 " Show hidden files
 
 " Gundo
 " -----
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <silent> <F5> :GundoToggle<CR>
 if has('python3')
     let g:gundo_prefer_python3 = 1 " Anything else breaks on Ubuntu 16.04+
 endif
