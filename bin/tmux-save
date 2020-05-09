@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+# Exit if not in tmux session
+if [ -z "$TMUX" ]; then
+    echo "Not in a tmux session"
+    exit 1
+fi
+
+# Exit if no session name (meaning tmux session wasn't started by script
+SESSION_NAME=$(tmux show-environment | grep '^SESSION_NAME' | sed 's/^SESSION_NAME=//')
+if [ -z "$SESSION_NAME" ]; then 
+    echo "Unable to mark tmux session as non-killable (no SESSION_NAME)"
+    echo "This session will not be killed automatically when detached"
+    exit 1
+fi
+
+# Make save directory if needed
+if [ ! -d ~/.tmux-saves ]; then
+    mkdir ~/.tmux-saves
+fi
+
+# Make file and display appropriate output
+if touch ~/.tmux-saves/"$SESSION_NAME"; then
+    echo "Marked tmux session \"$SESSION_NAME\" as non-killable"
+else
+    echo "Unable to mark tmux session as non-killable"
+    exit 1
+fi

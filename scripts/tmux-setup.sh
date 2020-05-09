@@ -12,17 +12,20 @@ else
     SESSION_NAME="$BASE_SESSION"
 fi
 
+# Remove save file if exists
+rm -f ~/.tmux-saves/"$SESSION_NAME"
+
 # Start session (with message if there are detached sessions)
 if /usr/local/bin/tmux list-sessions 2> /dev/null | grep -vq '^.* (attached)$'; then
-    /usr/local/bin/tmux new -s "$SESSION_NAME" \; display-message "WARNING: detached sessions" > /dev/null 2>&1
+    /usr/local/bin/tmux new -s "$SESSION_NAME" \; setenv SESSION_NAME "$SESSION_NAME" \; display-message "WARNING: detached sessions" > /dev/null 2>&1
 else
-    /usr/local/bin/tmux new -s "$SESSION_NAME" > /dev/null 2>&1
+    /usr/local/bin/tmux new -s "$SESSION_NAME" \; setenv SESSION_NAME "$SESSION_NAME" > /dev/null 2>&1
 fi
 
-# After exiting, kill session if it is not attached
-if ! /usr/local/bin/tmux list-sessions | grep -q "^$SESSION_NAME: .* (attached)\$"; then
+# After exiting, kill session if it is not attached or liste in ~/.tmux-saves/
+if [ ! -f ~/.tmux-saves/"$SESSION_NAME" ] && ! /usr/local/bin/tmux list-sessions | grep -q "^$SESSION_NAME: .* (attached)\$"; then
     /usr/local/bin/tmux kill-session -t "$SESSION_NAME" > /dev/null 2>&1
-    echo "[kill-session $SESSION_NAME]"
+    echo "[kill session $SESSION_NAME]"
 else
     echo "[detach from $SESSION_NAME]"
 fi

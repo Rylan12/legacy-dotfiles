@@ -8,6 +8,10 @@ alias cx='chmod +x'
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 
+# tmux
+alias tkill='tmux kill-server'
+alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
+
 # Create and source virtual environment
 alias venv='virtualenv venv && source venv/bin/activate'
 
