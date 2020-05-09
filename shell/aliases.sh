@@ -8,6 +8,9 @@ alias cx='chmod +x'
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 
+# cd to development directory
+alias dev='cd ~/Development/'
+
 # tmux
 alias tkill='tmux kill-server'
 alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
