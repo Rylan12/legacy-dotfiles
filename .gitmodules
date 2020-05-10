@@ -89,7 +89,3 @@
 	path = vim/pack/vendor/start/vim-snazzy
 	url = https://github.com/connorholyday/vim-snazzy.git
 	ignore = untracked
-[submodule "vim/pack/vendor/start/vim-virtualenv"]
-	path = vim/pack/vendor/start/vim-virtualenv
-	url = https://github.com/jmcantrell/vim-virtualenv.git
-	ignore = untracked
