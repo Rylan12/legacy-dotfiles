@@ -3,34 +3,43 @@
 " -------
 
 set nocompatible " Not vi compatible
-set shortmess+=I " Disable the default Vim startup message.
 set hidden " Allow hidden buffers
 set noerrorbells visualbell t_vb= " Disable audible bell because it's annoying.
 set mouse+=a " Enable mouse support
-set wildmenu " Show autocomplete for commands
 set ttimeoutlen=10 " Remove delay when pressing <Esc>
-set showcmd " Show commands for some actions
 set updatetime=100 " Update more quickly
+set splitbelow " New window appears below
+set splitright " New window appears to the right
+
+
+
+" ----------
+" Appearance
+" ----------
+set shortmess+=I " Disable the default Vim startup message.
+set wildmenu " Show autocomplete for commands
+set showcmd " Show commands for some actions
+set laststatus=2 " Always show the status line
+set number " Show line numbers.
+set relativenumber " Show relative numbers
+set noshowmode " Don't show current mode (shown in lightline plugin)
+set ruler " Show mouse position on status line
+
 colorscheme snazzy
+let g:lightline = {'colorscheme': 'snazzy'} " Status bar theme
+" Load status bar setup
+let $STATUSFILE=expand("~/.vim/status-config.vim")
+if filereadable($STATUSFILE)
+    source $STATUSFILE
+endif
 
 
 " ------
 " Editor
 " ------
 
-set number " Show line numbers.
-set relativenumber " Show relative numbers
-
-set splitbelow " New window appears below
-set splitright " New window appears to the right
-
-set laststatus=2 " Always show the status line
-set noshowmode " Don't show current mode (shown in lightline plugin)
-set ruler " Show mouse position on status line
-
 set wrap " Enable line wrapping
 set linebreak " Won't linebreak in the middle of a word
-
 set backspace=indent,eol,start " Allow backspace past insert point and over new line
 set scrolloff=3 " Keep 5 lines under cursor at top and bottom of screen
 
@@ -57,7 +66,6 @@ set smarttab " TAB inserts 'tabstop' number of spaces
 " Code Folding
 set foldlevel=20 " Have most folds open on start
 set nofoldenable
-
 
 
 " ------
@@ -170,11 +178,6 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
-
-" Lightline
-let g:lightline = {
-\ 'colorscheme': 'snazzy',
-\ }
 
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle<CR>
