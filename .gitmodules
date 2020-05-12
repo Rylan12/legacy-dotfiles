@@ -93,3 +93,7 @@
 	path = vim/pack/vendor/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-tmux-navigator"]
+	path = vim/pack/vendor/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+	ignore = untracked
