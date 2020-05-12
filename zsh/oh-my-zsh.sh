@@ -72,7 +72,7 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 # NOTE: zsh-syntax-highlighting should be last
 #plugins=(colored-man-pages git osx thefuck tmux virtualenv zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(colored-man-pages git osx thefuck zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(colored-man-pages git osx thefuck vi-mode zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
