@@ -155,6 +155,9 @@ nmap <Space>L <Plug>(easymotion-overwin-line)
 " GitGutter
 highlight! link SignColumn LineNr
 
+" Goyo
+map <Leader>g :Goyo<Cr>
+
 " Gundo
 nnoremap <silent> <F5> :GundoToggle<CR>
 if has('python3')
@@ -178,6 +181,12 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+" Limelight
+nmap <Leader>l :Limelight!!<CR>
+xmap <Leader>l <Plug>(Limelight)
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle<CR>
