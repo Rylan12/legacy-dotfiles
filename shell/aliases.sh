@@ -8,8 +8,10 @@ alias cx='chmod +x'
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 
-# cd to development directory
+# cd shortcuts
+alias des='cd ~/Desktop/'
 alias dev='cd ~/Development/'
+alias doc='cd ~/Documents/'
 
 # tmux
 alias tkill='tmux kill-server'
