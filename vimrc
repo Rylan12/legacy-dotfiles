@@ -136,6 +136,14 @@ autocmd FileType gitcommit set colorcolumn+=51
 autocmd FileType gitcommit highlight ColorColumn ctermbg=DarkGray
 
 
+" ------------------
+" File Type Settings
+" ------------------
+
+" Turn on spell check for markdown
+autocmd FileType markdown setlocal spell
+
+
 " -------
 " Plugins
 " -------
