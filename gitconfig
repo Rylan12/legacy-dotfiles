@@ -6,6 +6,8 @@
 	root = rev-parse --show-toplevel
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
+[color]
+	ui = auto
 [core]
 	autocrlf = input
 	safecrlf = true
