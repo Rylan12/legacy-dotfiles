@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+# Exit if any command fails
+set -e
+
+FORMULA="$(echo "$1" | tr '[:upper:]' '[:lower:]')"
+COMMIT_MESSAGE="" # Example: "update formula" --> "foo: update formula
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+magenta='\033[0;35m'
+
+bold() {
+    line=$(printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -)
+    echo "${magenta}${bold}$line"
+    echo "==>${normal} $1"
+}
+
+bold "brew style $FORMULA"
+brew style "$FORMULA"
+
+bold "brew reinstall -s $FORMULA"
+brew reinstall -s "$FORMULA"
+
+bold "brew test $FORMULA"
+brew test "$FORMULA"
+
+bold "brew audit --strict $FORMULA"
+brew audit --strict "$FORMULA"
+
+bold "brew audit --skip-style --online --git $FORMULA"
+brew audit --skip-style --online --git "$FORMULA"
+
+bold "brew uninstall -f $FORMULA"
+brew uninstall -f "$FORMULA"
+
+echo "$FORMULA: $COMMIT_MESSAGE" | pbcopy
+bold "$FORMULA: $COMMIT_MESSAGE"
