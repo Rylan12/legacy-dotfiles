@@ -22,6 +22,17 @@ alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 
 # Create and source virtual environment
 alias venv='virtualenv venv && source venv/bin/activate'
+source-venv() {
+    [[ ! -f venv/bin/activate ]] && echo "venv/bin/activate doesn't exist" && return 1
+    source "venv/bin/activate"
+}
+venv-delete() {
+    [[ -z "$VIRTUAL_ENV" ]] && echo "Not in a virtual environment" && return 1
+    echo "Deleting $VIRTUAL_ENV"
+    venv="$VIRTUAL_ENV"
+    deactivate
+    trash "$venv"
+}
 
 # dotfiles
 alias cddf='cd ~/.dotfiles'
