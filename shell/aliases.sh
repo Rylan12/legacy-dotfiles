@@ -13,6 +13,9 @@ alias des='cd ~/Desktop/'
 alias dev='cd ~/Development/'
 alias doc='cd ~/Documents/'
 
+# reload current directory
+alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
+
 # tmux
 alias tkill='tmux kill-server'
 alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
