@@ -1,4 +1,5 @@
 [alias]
+	dm = "!f() { git diff $(git merge-base origin/master HEAD); }; f"
 	graph = log --graph --format=line
 	graph-detail = log --graph --format=detail
 	graph-all = log --graph --format=line --all
