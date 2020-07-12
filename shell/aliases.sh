@@ -20,6 +20,9 @@ alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 
 alias tkill='tmux kill-server'
 alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 
+# lazygit alias
+alias lg='lazygit'
+
 # Create and source virtual environment
 alias venv='virtualenv venv && source venv/bin/activate'
 source-venv() {
