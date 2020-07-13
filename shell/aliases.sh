@@ -5,7 +5,8 @@ alias mv='mv -i'
 # Change permission
 alias cx='chmod +x'
 
-# cd to git root directory
+# cd aliases
+alias cd..='cd ..'
 alias cdgr='cd "$(git root)"'
 
 # cd shortcuts
