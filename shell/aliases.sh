@@ -107,3 +107,11 @@ xin() {
 
 # watch colors
 alias watch="watch -c"
+
+sha256() {
+    url="$1"
+    file=$(basename $url)
+    curl --silent $url > $file
+    echo $(shasum -a 256 $file | awk '{print $1}')
+    rm $file
+}
