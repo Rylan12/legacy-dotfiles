@@ -25,17 +25,30 @@ alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 alias lg='lazygit'
 
 # Create and source virtual environment
-alias venv='virtualenv venv && source venv/bin/activate'
+venv() {
+    [[ -d venv ]] && echo "venv directory already exists" 1>&2 && return 1
+    virtualenv venv && source venv/bin/activate
+}
 source-venv() {
-    [[ ! -f venv/bin/activate ]] && echo "venv/bin/activate doesn't exist" && return 1
-    source "venv/bin/activate"
+    [[ ! -f venv/bin/activate ]] && echo "venv/bin/activate doesn't exist" 1>&2 && return 1
+    source venv/bin/activate
 }
 venv-delete() {
-    [[ -z "$VIRTUAL_ENV" ]] && echo "Not in a virtual environment" && return 1
+    [[ -z "$VIRTUAL_ENV" ]] && echo "Not in a virtual environment" 1>&2 && return 1
     echo "Deleting $VIRTUAL_ENV"
     venv="$VIRTUAL_ENV"
     deactivate
-    trash "$venv"
+    rm -rf "$venv"
+}
+
+# Automate poet for Homebrew resource blocks
+poet-venv() {
+    venv > /dev/null || return 1
+    pip install homebrew-pypi-poet > /dev/null
+    [[ -z "$1" ]] && echo "fail" 1>&2 && return
+    pip install "$1" > /dev/null
+    poet "$1" | tee /dev/tty | pbcopy
+    venv-delete > /dev/null
 }
 
 # dotfiles
