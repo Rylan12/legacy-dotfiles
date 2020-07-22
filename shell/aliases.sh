@@ -24,6 +24,26 @@ alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 # lazygit alias
 alias lg='lazygit'
 
+# Checkout PR
+alias prc='gh pr checkout'
+
+# Pipe to clipboard
+alias pb='pbcopy'
+
+# exa aliases
+alias e='exa'
+alias ea='exa -a'
+alias el='exa -l'
+alias elh='exa -lh'
+alias ela='exa -la'
+alias elah='exa -lah'
+
+# Homebrew aliases
+alias brepo='cd /usr/local/Homebrew'
+alias bcore='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/'
+alias bdeps='~/Development/homebrew-dependency-viewer/brew-deps -e ~/Development/homebrew-dependency-viewer/exclude.txt'
+alias bdeps-reset='cd ~/Development/homebrew-dependency-viewer/ && bdeps > exclude.txt'
+
 # Create and source virtual environment
 venv() {
     [[ -d venv ]] && echo "venv directory already exists" 1>&2 && return 1

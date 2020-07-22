@@ -7,3 +7,6 @@ export CLICOLOR=1
 
 # GPG Key for GitHub
 export GPG_TTY=$(tty)
+
+# Homebrew
+export HOMEBREW_DEVELOPER=1
