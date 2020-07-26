@@ -31,8 +31,8 @@ brew audit --strict "$FORMULA"
 bold "brew audit --skip-style --online --git $FORMULA"
 brew audit --skip-style --online --git "$FORMULA"
 
-bold "brew uninstall -f $FORMULA"
-brew uninstall -f "$FORMULA"
+bold "brew uninstall $FORMULA"
+brew uninstall "$FORMULA"
 
 echo "$FORMULA: $COMMIT_MESSAGE" | pbcopy
 bold "$FORMULA: $COMMIT_MESSAGE"
