@@ -196,6 +196,9 @@ xmap <Leader>l <Plug>(Limelight)
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+" NERD Commenter
+let g:NERDSpaceDelims = 1 " Add a space after comment delimiters
+
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle<CR>
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
