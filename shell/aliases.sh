@@ -45,6 +45,9 @@ alias bdeps='~/Development/homebrew-dependency-viewer/brew-deps -e ~/Development
 alias bdeps-reset='cd ~/Development/homebrew-dependency-viewer/ && bdeps > exclude.txt'
 alias baudit='brew audit --strict --online --git'
 
+# GitKraken
+alias kraken='git kraken'
+
 # Create and source virtual environment
 venv() {
     [[ -d venv ]] && echo "venv directory already exists" 1>&2 && return 1
