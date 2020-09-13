@@ -13,6 +13,7 @@ alias cdgr='cd "$(git root)"'
 alias des='cd ~/Desktop/'
 alias dev='cd ~/Development/'
 alias doc='cd ~/Documents/'
+alias dow='cd ~/Downloads/'
 
 # reload current directory
 alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
