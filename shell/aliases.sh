@@ -25,6 +25,9 @@ alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 # lazygit alias
 alias lg='lazygit'
 
+# gh remove pager
+alias gh='PAGER= gh'
+
 # Checkout PR
 alias prc='gh pr checkout'
 
