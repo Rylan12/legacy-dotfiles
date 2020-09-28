@@ -3,8 +3,21 @@
 # Exit if any command fails
 set -e
 
+# First argument is the formula
 FORMULA="$(echo "$1" | tr '[:upper:]' '[:lower:]')"
+[ -z "$FORMULA" ] && echo "Error: no formula passed" && exit 1
+
+# Remaining arguments are the commit message (unless -b is passed)
 COMMIT_MESSAGE="" # Example: "update formula" --> "foo: update formula
+BOTTLE=
+shift
+for arg in "$@"; do
+    if [ "$arg" = "-b" ]; then
+        BOTTLE=1
+    else
+        COMMIT_MESSAGE="$COMMIT_MESSAGE $arg"
+    fi
+done
 
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -19,8 +32,13 @@ bold() {
 bold "brew style $FORMULA"
 brew style "$FORMULA"
 
-bold "brew reinstall -s $FORMULA"
-brew reinstall -s "$FORMULA"
+if [ -z "$BOTTLE" ]; then
+    bold "brew reinstall -s $FORMULA"
+    brew reinstall -s "$FORMULA"
+else
+    bold "brew reinstall $FORMULA"
+    brew reinstall "$FORMULA"
+fi
 
 bold "brew test $FORMULA"
 brew test "$FORMULA"
@@ -34,5 +52,7 @@ brew audit --skip-style --online --git "$FORMULA"
 bold "brew uninstall $FORMULA"
 brew uninstall "$FORMULA"
 
-echo "$FORMULA: $COMMIT_MESSAGE" | pbcopy
-bold "$FORMULA: $COMMIT_MESSAGE"
+if [ ! -z "$COMMIT_MESSAGE" ]; then
+    echo "$FORMULA:$COMMIT_MESSAGE" | pbcopy
+    bold "$FORMULA:$COMMIT_MESSAGE"
+fi
