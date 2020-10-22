@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+FORMULA="$1"
+
+invalid() {
+    echo ""
+    echo "❌ $FORMULA" "$@" 1>&2
+    exit 1
+}
+
+deps_output="$(brew deps --tree --include-build --include-test "$FORMULA")"
+
+echo "$deps_output" | grep -q '^[├└]── python@3.[78]$' || invalid 'does not depend on python@3.8'
+
+printf "·"
+
+[[ -z $(brew uses --include-build --include-test "$FORMULA") ]] || invalid 'is a dependency in another formula'
+
+printf "·"
+
+echo "$deps_output" | grep -q '^│\? .*[├└]── python@3.[78]$' && invalid 'depends recursively on python@3.8'
+
+echo "·"
+
+echo "✅ $FORMULA is valid!"
