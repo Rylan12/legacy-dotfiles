@@ -45,7 +45,9 @@ alias elah='exa -lah'
 # Homebrew aliases
 alias brepo='cd /usr/local/Homebrew'
 alias bcore='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/'
-cdb() { cd "$(brew --repository $1)" }
+cdb() {
+    cd "$(brew --repository $1)"
+}
 alias cellar='cd /usr/local/Cellar/'
 alias bdeps='~/Development/homebrew-dependency-viewer/brew-deps -e ~/Development/homebrew-dependency-viewer/exclude.txt'
 alias bdeps-reset='cd ~/Development/homebrew-dependency-viewer/ && bdeps > exclude.txt'
