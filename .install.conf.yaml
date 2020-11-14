@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - link:
+    ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
     ~/.dotfiles: ''
