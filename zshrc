@@ -11,6 +11,9 @@ if [ -f ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before
 fi
 
+# Zsh configuration before
+source ~/.zsh/config_before.zsh
+
 # Bootstrap
 source ~/.shell/bootstrap.sh
 
@@ -27,6 +30,9 @@ source ~/.zsh/plugins_after.zsh
 if [ -d ~/.oh-my-zsh ]; then
     source ~/.zsh/oh-my-zsh.sh
 fi
+
+# Zsh configuration after
+source ~/.zsh/config_after.zsh
 
 # Allow local customizations in the ~/.shell_local_after file
 if [ -f ~/.shell_local_after ]; then
