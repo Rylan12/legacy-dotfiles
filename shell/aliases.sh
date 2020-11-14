@@ -25,11 +25,11 @@ alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 # lazygit alias
 alias lg='lazygit'
 
-# gh remove pager
-alias gh='PAGER= gh'
-
-# Checkout PR
+# gh aliases
+alias gh='PAGER= gh' # remove pager
 alias prc='gh pr checkout'
+alias prv='gh pr view'
+alias prvw='gh pr view -w' # open PR in web browser
 
 # Pipe to clipboard
 alias pb='pbcopy'
