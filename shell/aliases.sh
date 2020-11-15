@@ -51,8 +51,7 @@ cdb() {
     cd "$(brew --repository $1)"
 }
 alias cellar='cd /usr/local/Cellar/'
-alias bdeps='~/Development/homebrew-dependency-viewer/brew-deps -e ~/Development/homebrew-dependency-viewer/exclude.txt'
-alias bdeps-reset='cd ~/Development/homebrew-dependency-viewer/ && bdeps > exclude.txt'
+alias bcleanup='brew bundle cleanup'
 alias baudit='brew audit --strict --online --git'
 
 # GitKraken

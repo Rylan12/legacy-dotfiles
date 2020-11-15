@@ -6,7 +6,9 @@ export CLICOLOR=1
 # export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # GPG Key for GitHub
-export GPG_TTY=$(tty)
+GPG_TTY=$(tty)
+export GPG_TTY
 
 # Homebrew
 export HOMEBREW_DEVELOPER=1
+export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
