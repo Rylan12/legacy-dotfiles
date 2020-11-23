@@ -57,6 +57,14 @@ alias baudit='brew audit --strict --online --git'
 # GitKraken
 alias kraken='git kraken'
 
+# Extract tar from URL
+extract() {
+    file="$(basename "$1")"
+    curl "$1" > "$file"
+    tar xf "$file"
+    rm "$file"
+}
+
 # Create and source virtual environment
 venv() {
     [[ -d venv ]] && echo "venv directory already exists" 1>&2 && return 1
