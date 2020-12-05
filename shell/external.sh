@@ -12,3 +12,6 @@ export GPG_TTY
 # Homebrew
 export HOMEBREW_DEVELOPER=1
 export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
+
+# Set less defulat options (oh-my-zsh sets only -R)
+export LESS="-FIRX"
