@@ -59,10 +59,7 @@ alias kraken='git kraken'
 
 # Extract tar from URL
 extract() {
-    file="$(basename "$1")"
-    curl "$1" > "$file"
-    tar xf "$file"
-    rm "$file"
+    curl "$1" | tar xf -
 }
 
 # Create and source virtual environment
@@ -163,9 +160,5 @@ xin() {
 alias watch="watch -c"
 
 sha256() {
-    url="$1"
-    file=$(basename $url)
-    curl --silent $url > $file
-    echo $(shasum -a 256 $file | awk '{print $1}')
-    rm $file
+    curl --silent "$1" | shasum -a 256 | awk '{print $1}'
 }
