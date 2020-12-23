@@ -14,6 +14,7 @@ alias des='cd ~/Desktop/'
 alias dev='cd ~/Development/'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
+alias hom='cd ~/Development/homebrew/'
 
 # reload current directory
 alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
