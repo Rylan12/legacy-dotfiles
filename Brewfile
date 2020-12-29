@@ -46,12 +46,14 @@ brew "nano"
 brew "ncdu"
 brew "nmap"
 brew "node"
+brew "openconnect"
 brew "pipgrip"
+brew "rbenv"
 brew "ripgrep"
-brew "ruby"
 brew "shellcheck"
 brew "so"
 brew "thefuck"
+brew "tiger-vnc"
 brew "tldr"
 brew "tmux"
 brew "trash"
@@ -61,20 +63,21 @@ brew "watch"
 brew "wget"
 brew "wifi-password"
 brew "yarn"
-brew "youtube-dl"
 brew "rylan12/personal/archey-macos"
 brew "teamookla/speedtest/speedtest"
 cask "balenaetcher"
 cask "disk-inventory-x"
+cask "github"
 cask "hammerspoon"
 cask "macdown"
 cask "mactex-no-gui"
 cask "notable"
+cask "orka"
 cask "vlc"
 mas "DevCleaner", id: 1388020431
 mas "Grammarly for Safari", id: 1462114288
 mas "Honey", id: 1472777122
-mas "RAR Extractor Lite", id: 646295438
+mas "RAR Extractor - The Unarchiver", id: 646295438
 mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "Trello", id: 1278508951
