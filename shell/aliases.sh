@@ -51,6 +51,7 @@ alias bcore='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/'
 cdb() {
     cd "$(brew --repository $1)"
 }
+alias cdbl='cd $(brew --repository)/Library/Homebrew'
 alias cellar='cd /usr/local/Cellar/'
 alias bcleanup='brew bundle cleanup'
 alias baudit='brew audit --strict --online --git'
