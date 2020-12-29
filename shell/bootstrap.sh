@@ -1,5 +1,3 @@
 path_prepend "/usr/local/sbin"
 path_prepend "/usr/local/opt/python/libexec/bin"
-path_prepend "/usr/local/opt/ruby/bin"
-path_prepend "/usr/local/lib/ruby/gems/2.7.0/bin"
 path_prepend "$HOME/bin"

@@ -15,3 +15,7 @@ export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
 
 # Set less defulat options (oh-my-zsh sets only -R)
 export LESS="-FIRX"
+
+# Setup rbenv
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
+eval "$(rbenv init -)"
