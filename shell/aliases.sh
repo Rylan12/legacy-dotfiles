@@ -15,6 +15,15 @@ alias dev='cd ~/Development/'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias hom='cd ~/Development/homebrew/'
+work() {
+    WORKSPACE_DIR=~/Development/vscode-workspaces/
+    [[ $# -eq 0 ]] && cd $WORKSPACE_DIR && return
+
+    WORKSPACE_FILE="$WORKSPACE_DIR/$1.code-workspace"
+    [[ ! -f "$WORKSPACE_FILE" ]] && echo "$1 workspace not found!" && return 1
+
+    open "$WORKSPACE_FILE"
+}
 
 # reload current directory
 alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
