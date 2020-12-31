@@ -13,8 +13,8 @@ export GPG_TTY
 export HOMEBREW_DEVELOPER=1
 export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
 
-# Set less defulat options (oh-my-zsh sets only -R)
-export LESS="-FIRX"
+# Set less default options (oh-my-zsh sets only -R)
+export LESS="-FIR"
 
 # Setup rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
