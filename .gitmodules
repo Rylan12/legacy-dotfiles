@@ -105,3 +105,6 @@
 	path = vim/pack/vendor/start/limelight.vim
 	url = https://github.com/junegunn/limelight.vim.git
 	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-endwise"]
+	path = vim/pack/vendor/start/vim-endwise
+	url = git@github.com:tpope/vim-endwise.git
