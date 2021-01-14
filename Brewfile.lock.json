@@ -5,19 +5,19 @@
         "revision": "da6f87a7722e329331b978ba3cdb515b872af944"
       },
       "homebrew/bundle": {
-        "revision": "72f41aae9b14d3603dd6d9a4e6bdecd871b5310a"
+        "revision": "be1c558825f42c666bb7c54b89f9027012a0112f"
       },
       "homebrew/cask": {
-        "revision": "57035d395b61ffcb956a5bf9be627456b61fe57c"
+        "revision": "4cbded5eaec8bb1a07c5fa2c9d436db92e50b505"
       },
       "homebrew/cask-versions": {
-        "revision": "b11d46525341b09a2c6e36fd5a85641b58f862a7"
+        "revision": "323c39d2ca6f3bbd956f3d0416524fc5b9fd2bbc"
       },
       "homebrew/command-not-found": {
         "revision": "b57c39964b0744f48e73c9b485476221c54a9d58"
       },
       "homebrew/core": {
-        "revision": "f2db093f9f16d3e5d189021f0957ea01e550e483"
+        "revision": "cd1365e0e21fdb0b9c33b61910410d3b5955d99d"
       },
       "homebrew/services": {
         "revision": "8c15ce873b101ec34e66fe6ffb2ed47009ff0f13"
@@ -44,7 +44,7 @@
         "revision": "b79ea77017ea57c98658225883d7ecc3d4410fbd"
       },
       "homebrew/formula-analytics": {
-        "revision": "30329ac81a5b41eff04c765e9ddf364328a7af30"
+        "revision": "78a39f1613131fbb147aef75dd646a57a7ba56ed"
       }
     },
     "brew": {
@@ -128,26 +128,26 @@
         }
       },
       "awscli": {
-        "version": "2.1.17",
+        "version": "2.1.18",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.17.big_sur.bottle.tar.gz",
-              "sha256": "a77e707b7a4ce633fa2d91e585230da5b6281b7a1e6dda8cc8006a2c9cfcc122"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.18.big_sur.bottle.tar.gz",
+              "sha256": "91d0084a01cbea9c0ae869920748068f7b1b476594a5dbb78f15f57366baf65a"
             },
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.17.arm64_big_sur.bottle.tar.gz",
-              "sha256": "14668b1333807ca0e6b28367ea6d4fad3fbcf4fef0c141b363d02c58a09c1398"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.18.arm64_big_sur.bottle.tar.gz",
+              "sha256": "bbf1def259e4059c815d7c8edb989e7b413ae932a5e118f578297a7a66528257"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.17.catalina.bottle.tar.gz",
-              "sha256": "8d127f2f6ff9c5a764c567f4e45f62ddaf33a96579d6cb492cb01ba8f4b53fb9"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.18.catalina.bottle.tar.gz",
+              "sha256": "1f135776103528b20ae886552a2cb2e221b3899d71514f780445e76ecdb6ab6b"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.17.mojave.bottle.tar.gz",
-              "sha256": "4679c03b7236b1c1a24ac9eac9daa3751f29bec688aaee9565ea32f88d50e956"
+              "url": "https://homebrew.bintray.com/bottles/awscli-2.1.18.mojave.bottle.tar.gz",
+              "sha256": "5c7aaabf7deaa50423e71682853687c58c493e2f66c106dafe60433bfa2b688d"
             }
           }
         }
@@ -1436,6 +1436,35 @@
             }
           }
         }
+      },
+      "git-sizer": {
+        "version": "1.3.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/git-sizer-1.3.0.big_sur.bottle.tar.gz",
+              "sha256": "f56872fa31991104cc094547c29ae3c3d5f33fe0ef7fce8cc54e98c29345d433"
+            },
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/git-sizer-1.3.0.catalina.bottle.tar.gz",
+              "sha256": "5d465491e6d2fd3b025dd6ad8f1448ef6ee7dd18d84ef73e895cc483afb9b98c"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/git-sizer-1.3.0.mojave.bottle.tar.gz",
+              "sha256": "4d4e1b47018c1b5efe0ae71996e1dad3f7b0ec4f9616793121463b1c092b03af"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/git-sizer-1.3.0.high_sierra.bottle.tar.gz",
+              "sha256": "add468f96d564f1046a0908cc1f553c73a2ac672973f3c7a7bca47c12fd72867"
+            },
+            "sierra": {
+              "url": "https://homebrew.bintray.com/bottles/git-sizer-1.3.0.sierra.bottle.tar.gz",
+              "sha256": "b0a6d0757c623e8e6b1f2ed6e9fb05496b29dd6f615df72e615a7a6a8fb45e3e"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1517,7 +1546,7 @@
       },
       "Speedtest": {
         "id": "1153157709",
-        "version": "1.18"
+        "version": "1.19"
       },
       "Trello": {
         "id": "1278508951",
@@ -1536,9 +1565,9 @@
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "2.7.2-71-geb3a662",
+        "HOMEBREW_VERSION": "2.7.3-92-g7019899",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "f2db093f9f16d3e5d189021f0957ea01e550e483",
+        "Homebrew/homebrew-core": "cd1365e0e21fdb0b9c33b61910410d3b5955d99d",
         "CLT": "12.0.32.27",
         "Xcode": "12.0",
         "macOS": "11.1"
