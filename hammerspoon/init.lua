@@ -19,79 +19,6 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
   hs.execute(command)
 end)
 
---[[ Direction Window Movements:
---   y k u
---   h   l
---   b j n
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Y", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 10
-  f.y = f.y - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "K", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.y = f.y - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "U", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 10
-  f.y = f.y - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "B", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 10
-  f.y = f.y + 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "J", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.y = f.y + 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "N", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 10
-  f.y = f.y + 10
-  win:setFrame(f)
-end)
-]]
-
 -- Resize Window to Left or Right Side
 hs.hotkey.bind({"cmd", "alt", "shift"}, "Left", function()
   local win = hs.window.focusedWindow()
@@ -152,19 +79,6 @@ hs.loadSpoon("WiFiTransitions")
 spoon.WiFiTransitions.actOnNilTransitions = true
 spoon.WiFiTransitions.actions = {{from="GLERJ", fn=mute}}
 spoon.WiFiTransitions:start()
-
--- Brew Info
-hs.loadSpoon("BrewInfo")
-spoon.BrewInfo:bindHotkeys({
-  show_brew_info = {{"cmd","alt","ctrl"}, "B"},
-  open_brew_url = {{"cmd","alt","ctrl"}, "Q"},
-  show_brew_cask_info = {{"cmd","alt","ctrl"}, "C"},
-  open_brew_cask_url = {{"cmd","alt","ctrl"}, "E"}
-})
-
--- Emojis
--- hs.loadSpoon("Emojis")
--- spoon.Emojis:bindHotkeys({toggle={{"cmd", "alt", "ctrl"}, "E"}})
 
 -- Keyboard Shortcut Sheet
 hs.loadSpoon("KSheet")
