@@ -12,6 +12,7 @@
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
+    ~/.hammerspoon:
     ~/.inputrc:
     ~/.shell:
     ~/.tmux.conf:
