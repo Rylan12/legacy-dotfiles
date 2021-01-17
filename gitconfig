@@ -44,6 +44,8 @@
 [pretty]
 	line = %C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset) - %C(white)%s%C(reset) %C(dim white)-%C(reset) %C(bold dim white)%an%C(reset)%C(auto)%d%C(reset)
 	detail = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n%C(white)%w(100,10,10)%B%C(reset)%w(,,)%C(dim white)-%C(reset) %C(bold dim white)%aN%C(reset) %C(dim white)<%aE> %C(reset)%n%n
+[pull]
+	rebase = true
 [tag]
 	gpgSign = true
 [user]
