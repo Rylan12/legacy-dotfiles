@@ -10,11 +10,15 @@
 	upgrade-submodules = submodule update --init --remote
 [color]
 	ui = auto
+[commit]
+	gpgSign = true
 [core]
 	autocrlf = input
 	safecrlf = true
-	excludesfile = ~/.gitignore_global
+	excludesFile = ~/.gitignore_global
 	editor = vim
+[credential]
+	helper = osxkeychain
 [diff]
 	tool = vimdiff
 [difftool]
@@ -25,11 +29,13 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[gpg]
+	program = /usr/local/bin/gpg
 [init]
 	defaultBranch = main
 [merge]
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictStyle = diff3
 [mergetool]
 	prompt = false
 	keepBackup = false
@@ -38,6 +44,8 @@
 [pretty]
 	line = %C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset) - %C(white)%s%C(reset) %C(dim white)-%C(reset) %C(bold dim white)%an%C(reset)%C(auto)%d%C(reset)
 	detail = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n%C(white)%w(100,10,10)%B%C(reset)%w(,,)%C(dim white)-%C(reset) %C(bold dim white)%aN%C(reset) %C(dim white)<%aE> %C(reset)%n%n
+[tag]
+	gpgSign = true
 [user]
 	name = Rylan Polster
 	email = rslpolster@gmail.com
