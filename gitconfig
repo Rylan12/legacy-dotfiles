@@ -51,6 +51,7 @@
 [user]
 	name = Rylan Polster
 	email = rslpolster@gmail.com
+	signingKey = 46A744940CFF4D64
 
 # Import local settings
 [include]
