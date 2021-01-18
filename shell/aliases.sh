@@ -9,6 +9,9 @@ alias cx='chmod +x'
 alias cd..='cd ..'
 alias cdgr='cd "$(git root)"'
 
+# git aliases
+alias gdp='git diff --patience'
+
 # cd shortcuts
 alias des='cd ~/Desktop/'
 alias dev='cd ~/Development/'
