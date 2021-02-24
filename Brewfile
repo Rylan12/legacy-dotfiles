@@ -74,14 +74,12 @@ cask "disk-inventory-x"
 cask "github"
 cask "hammerspoon"
 cask "macdown"
-cask "mactex-no-gui"
-cask "notable"
 cask "orka"
 cask "vlc"
 mas "DevCleaner", id: 1388020431
 mas "Grammarly for Safari", id: 1462114288
 mas "Honey", id: 1472777122
-mas "RAR Extractor - The Unarchiver", id: 646295438
+mas "RAR Extractor - WinRAR ZIP 7Z", id: 646295438
 mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "Trello", id: 1278508951
