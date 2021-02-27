@@ -6,6 +6,7 @@
 	graph-detail-all = log --graph --format=detail --all
 	kraken = !open -na "GitKraken" --args '' -p "$(cd "${1:-.}" && git rev-parse --show-toplevel) && open -a GitKraken; :"
 	root = rev-parse --show-toplevel
+	sync = !git pull --rebase upstream master && git push origin master
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
 [color]
