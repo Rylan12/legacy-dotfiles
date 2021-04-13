@@ -13,6 +13,7 @@ tap "rylan12/unpack-bottle"
 tap "teamookla/speedtest"
 brew "ack"
 brew "openssl@1.1"
+brew "aria2"
 brew "sqlite"
 brew "python@3.9"
 brew "awscli"
@@ -36,6 +37,7 @@ brew "gnupg"
 brew "ncurses"
 brew "htop"
 brew "hub"
+brew "hyperfine"
 brew "jq"
 brew "lazygit"
 brew "less"
@@ -53,6 +55,7 @@ brew "pinentry-mac"
 brew "pipgrip"
 brew "rbenv"
 brew "ripgrep"
+brew "rust"
 brew "shellcheck"
 brew "so"
 brew "thefuck"
@@ -61,6 +64,7 @@ brew "tldr"
 brew "tmux"
 brew "trash"
 brew "tree"
+brew "tz"
 brew "vim"
 brew "watch"
 brew "wget"
@@ -74,13 +78,19 @@ cask "disk-inventory-x"
 cask "github"
 cask "hammerspoon"
 cask "macdown"
+cask "mactex-no-gui"
+cask "onyx"
 cask "orka"
 cask "vlc"
 mas "DevCleaner", id: 1388020431
 mas "Grammarly for Safari", id: 1462114288
 mas "Honey", id: 1472777122
-mas "RAR Extractor - WinRAR ZIP 7Z", id: 646295438
+mas "Icon Set Creator", id: 939343785
+mas "Icon Set Studio", id: 1501296766
+mas "iMovie", id: 408981434
 mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "Trello", id: 1278508951
+mas "Twitter", id: 1482454543
 mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
