@@ -96,4 +96,3 @@ mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "Trello", id: 1278508951
 mas "WhatsApp", id: 1147396723
-mas "Xcode", id: 497799835
