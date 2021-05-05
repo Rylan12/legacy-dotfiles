@@ -60,6 +60,7 @@ alias elah='exa -lah'
 # Homebrew aliases
 alias brepo='cd /usr/local/Homebrew'
 alias bcore='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/'
+alias bcask='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/'
 cdb() {
     cd "$(brew --repository $1)"
 }
