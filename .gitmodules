@@ -16,7 +16,7 @@
 	ignore = untracked
 [submodule "vim/pack/vendor/start/gundo.vim"]
 	path = vim/pack/vendor/start/gundo.vim
-	url = http://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 	ignore = untracked
 [submodule "vim/pack/vendor/start/lightline.vim"]
 	path = vim/pack/vendor/start/lightline.vim
