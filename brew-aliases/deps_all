@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew deps-all
+#:  * `deps-all` [args...]
+#:    `brew deps-all` is an alias for `brew deps --include-test --include-build`
+brew deps --include-test --include-build $*
+

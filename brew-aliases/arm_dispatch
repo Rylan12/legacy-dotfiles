@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew arm-dispatch
+#:  * `arm-dispatch` [args...]
+#:    `brew arm-dispatch` is an alias for `brew dispatch-build-bottle --macos 11-arm64 --upload`
+brew dispatch-build-bottle --macos 11-arm64 --upload $*
+

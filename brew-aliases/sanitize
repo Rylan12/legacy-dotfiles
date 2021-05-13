@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew sanitize
+#:  * `sanitize` [args...]
+#:    `brew sanitize` is an alias for `brew style --fix $(git -c color.status=false status -su | grep -vE "^(D| D)" | tee /dev/tty | cut -c4-)`
+brew style --fix $(git -c color.status=false status -su | grep -vE "^(D| D)" | tee /dev/tty | cut -c4-) $*
+

@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew uses-all
+#:  * `uses-all` [args...]
+#:    `brew uses-all` is an alias for `brew uses --recursive --include-build --include-test`
+brew uses --recursive --include-build --include-test $*
+

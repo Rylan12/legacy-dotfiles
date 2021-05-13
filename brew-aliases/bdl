@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew bdl
+#:  * `bdl` [args...]
+#:    `brew bdl` is an alias for `num=${1:-"300"}; id="$(gh run list -L"$num" -RHomebrew/homebrew-core | grep "^completed" | grep "GitHub Actions CI" | grep "pull_request" | fzf-tmux -p "90%,50%" | awk '{ print $NF }')"; [ -n "$id" ] && gh run download -RHomebrew/homebrew-core $id`
+num=${1:-"300"}; id="$(gh run list -L"$num" -RHomebrew/homebrew-core | grep "^completed" | grep "GitHub Actions CI" | grep "pull_request" | fzf-tmux -p "90%,50%" | awk '{ print $NF }')"; [ -n "$id" ] && gh run download -RHomebrew/homebrew-core $id $*
+

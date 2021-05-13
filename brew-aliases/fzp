@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew fzp
+#:  * `fzp` [args...]
+#:    `brew fzp` is an alias for `id="$(gh pr list -L200 -R github.com/Homebrew/homebrew-core | TMUX="$HOMEBREW_TMUX" fzf-tmux -p "90%,50%" --multi | cut -f1)"; [ -n "$id" ] && brew pr-publish --autosquash $id`
+id="$(gh pr list -L200 -R github.com/Homebrew/homebrew-core | TMUX="$HOMEBREW_TMUX" fzf-tmux -p "90%,50%" --multi | cut -f1)"; [ -n "$id" ] && brew pr-publish --autosquash $id $*
+

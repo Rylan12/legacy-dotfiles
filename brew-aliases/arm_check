@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew arm-check
+#:  * `arm-check` [args...]
+#:    `brew arm-check` is an alias for `brew unbottled --tag=arm64_big_sur -v`
+brew unbottled --tag=arm64_big_sur -v $*
+
