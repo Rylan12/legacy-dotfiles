@@ -19,5 +19,3 @@ export LESS="-FIR"
 # Setup rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 eval "$(rbenv init -)"
-
-export HOMEBREW_TMUX="$TMUX"
