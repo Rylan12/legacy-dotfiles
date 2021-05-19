@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME=""
 
 # Plugins
-plugins=(alias-finder colored-man-pages git osx vi-mode zsh_reload zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(alias-finder colored-man-pages git osx vi-mode zsh_reload zsh-autosuggestions zsh-syntax-highlighting you-should-use)
 
 # Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh

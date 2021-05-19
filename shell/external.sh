@@ -20,5 +20,9 @@ export LESS="-FIR"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 eval "$(rbenv init -)"
 
+# ZSH you-should-use show all aliases
+# See https://github.com/MichaelAquilina/zsh-you-should-use#displaying-results
+export YSU_MODE=ALL
+
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
