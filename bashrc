@@ -20,6 +20,15 @@ source ~/.shell/external.sh
 # Aliases
 source ~/.shell/aliases.sh
 
+# FZF
+source ~/.shell/fzf.sh
+
+# FZF
+if [ -f ~/.fzf.bash ]; then
+    source ~/.fzf.bash
+    source ~/.shell/fzf.sh
+fi
+
 # Bash configuration after
 source ~/.bash/config.bash
 

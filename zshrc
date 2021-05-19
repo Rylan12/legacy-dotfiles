@@ -23,6 +23,12 @@ source ~/.shell/external.sh
 # Aliases
 source ~/.shell/aliases.sh
 
+# FZF
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+    source ~/.shell/fzf.sh
+fi
+
 # External plugins (initialized after)
 source ~/.zsh/plugins_after.zsh
 

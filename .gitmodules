@@ -105,3 +105,6 @@
 [submodule "vim/pack/vendor/start/vim-endwise"]
 	path = vim/pack/vendor/start/vim-endwise
 	url = git@github.com:tpope/vim-endwise.git
+[submodule "vim/pack/vendor/start/fzf.vim"]
+	path = vim/pack/vendor/start/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git

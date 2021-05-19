@@ -2,6 +2,8 @@
 alias cp='cp -i'
 alias mv='mv -i'
 
+alias files='fd --type f .'
+
 # Change permission
 alias cx='chmod +x'
 
