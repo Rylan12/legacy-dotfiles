@@ -37,6 +37,9 @@ alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 
 alias tkill='tmux kill-server'
 alias tsave='tmux-save' # Mark session as non-killable (~/bin/tmux-save)
 
+# diff-so-fancy
+alias dsf='diff-so-fancy'
+
 # lazygit alias
 alias lg='lazygit'
 
