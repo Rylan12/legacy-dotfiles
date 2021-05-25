@@ -12,6 +12,13 @@ export GPG_TTY
 # Homebrew
 export HOMEBREW_DEVELOPER=1
 export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
+export HOMEBREW_BAT=1
+export HOMEBREW_BOOTSNAP=1
+export HOMEBREW_PRY=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_FORCE_BREWED_GIT=1
+export HOMEBREW_FORCE_BREWED_CURL=1
+export HOMEBREW_GITHUB_PACKAGES_USER="Rylan12"
 
 # Set less default options (oh-my-zsh sets only -R)
 export LESS="-FIR"
