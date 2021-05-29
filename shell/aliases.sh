@@ -77,6 +77,11 @@ alias baudit='brew audit --strict --online --git'
 # GitKraken
 alias kraken='git kraken'
 
+# View contents of file
+view() {
+    curl "$1" | bat
+}
+
 # Extract tar from URL
 extract() {
     curl "$1" | tar xf -
