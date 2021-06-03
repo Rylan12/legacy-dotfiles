@@ -14,6 +14,9 @@ alias cdgr='cd "$(git root)"'
 # git aliases
 alias gdp='git diff --patience'
 
+# jq aliases
+alias jqc='jq -C'
+
 # cd shortcuts
 alias des='cd ~/Desktop/'
 alias dev='cd ~/Development/'
