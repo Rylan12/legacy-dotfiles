@@ -82,7 +82,7 @@ alias kraken='git kraken'
 
 # View contents of file
 view() {
-    curl "$1" | bat
+    curl --silent "$1" | bat
 }
 
 # Extract tar from URL
