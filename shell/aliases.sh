@@ -87,8 +87,16 @@ view() {
 }
 
 jview() {
-    FILENAME="$(basename "$1")"
-    curl --silent "$1" | jq | bat --language json --file-name "$FILENAME"
+    if [[ -z "$1" ]]; then
+        jq . /dev/stdin | bat --language json
+    else
+        FILENAME="$(basename "$1")"
+        if [[ -f "$1" ]]; then
+            jq . "$1" | bat --language json --file-name "$FILENAME"
+        else
+        curl --silent "$1" | jq | bat --language json --file-name "$FILENAME"
+        fi
+    fi
 }
 
 # Extract tar from URL
