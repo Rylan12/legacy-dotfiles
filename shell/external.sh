@@ -21,7 +21,13 @@ export HOMEBREW_FORCE_BREWED_CURL=1
 export HOMEBREW_GITHUB_PACKAGES_USER="Rylan12"
 
 # Set less default options (oh-my-zsh sets only -R)
-export LESS="-FIR"
+export LESS="-FIR --mouse"
+
+# bat configuration file
+export BAT_CONFIG_PATH="$HOME/.dotfiles/batconfig"
+
+# Use bat for manpages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Setup rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"

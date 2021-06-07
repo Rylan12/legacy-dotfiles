@@ -82,7 +82,13 @@ alias kraken='git kraken'
 
 # View contents of file
 view() {
-    curl --silent "$1" | bat
+    FILENAME="$(basename "$1")"
+    curl --silent "$1" | bat --file-name "$FILENAME"
+}
+
+jview() {
+    FILENAME="$(basename "$1")"
+    curl --silent "$1" | jq | bat --language json --file-name "$FILENAME"
 }
 
 # Extract tar from URL
