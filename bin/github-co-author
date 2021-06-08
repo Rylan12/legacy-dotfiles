@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+USERNAME="$1"
+
+NAME="$(gh api users/"$USERNAME" --jq .name --cache "5s")"
+EMAIL="$(gh api users/"$USERNAME" --jq .email --cache "5s")"
+
+if [[ -z "$EMAIL" ]]; then
+    EMAIL="$(gh api users/"$USERNAME" --jq .id --cache "5s")+$USERNAME@users.noreply.github.com"
+fi
+
+TRAILER="Co-authored-by: $NAME <$EMAIL>"
+echo "$TRAILER" | tee >(pbcopy)
