@@ -13,6 +13,8 @@ alias cdgr='cd "$(git root)"'
 
 # git aliases
 alias gdp='git diff --patience'
+alias gdm='git dm'
+alias grhhh='git reset --hard HEAD'
 
 # jq aliases
 alias jqc='jq -C'
