@@ -181,7 +181,6 @@ xin() {
 alias watch="watch -c"
 
 # SHA-256 aliases
-alias sha256sum='shasum -a 256'
 sha256url() {
     curl --silent "$1" | shasum -a 256 | awk '{print $1}'
 }
