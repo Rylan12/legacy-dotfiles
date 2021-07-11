@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew linux-check
+#:  * `linux-check` [args...]
+#:    `brew linux-check` is an alias for `brew unbottled --tag=x86_64_linux -v`
+brew unbottled --tag=x86_64_linux -v $*
+
