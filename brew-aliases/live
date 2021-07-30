@@ -1,6 +1,6 @@
 #! /bin/bash
 # alias: brew live
 #:  * `live` [args...]
-#:    `brew live` is an alias for `brew livecheck --installed --newer-only`
-brew livecheck --installed --newer-only $*
+#:    `brew live` is an alias for `brew livecheck --debug --verbose`
+brew livecheck --debug --verbose $*
 
