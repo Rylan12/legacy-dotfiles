@@ -76,6 +76,7 @@ cdb() {
 }
 alias cdbl='cd $(brew --repository)/Library/Homebrew'
 alias cellar='cd /usr/local/Cellar/'
+alias caskroom='cd /usr/local/Caskroom/'
 alias bcleanup='brew bundle cleanup'
 alias baudit='brew audit --strict --online --git'
 
