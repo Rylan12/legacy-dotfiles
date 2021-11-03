@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-HOMEBREW_NO_AUTO_UPDATE=1 exec "/usr/local/bin/brew" "$@"
