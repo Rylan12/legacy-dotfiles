@@ -108,3 +108,6 @@
 [submodule "vim/pack/vendor/start/fzf.vim"]
 	path = vim/pack/vendor/start/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule "vim/pack/vendor/start/vim-javascript"]
+	path = vim/pack/vendor/start/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
