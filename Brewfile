@@ -41,6 +41,7 @@ brew "git-sizer"
 brew "gnu-sed"
 brew "gnu-tar"
 brew "gnupg"
+brew "graphviz"
 brew "htop"
 brew "hyperfine"
 brew "jq"
@@ -80,21 +81,35 @@ brew "youtube-dl"
 brew "teamookla/speedtest/speedtest"
 cask "arduino"
 cask "balenaetcher"
+cask "discord"
 cask "disk-inventory-x"
+cask "fork"
 cask "github"
+cask "google-chrome"
 cask "macdown"
+cask "mactex"
 cask "onyx"
 cask "orka"
+cask "private-internet-access"
 cask "raycast"
 cask "skype"
+cask "slack"
 cask "spotify"
 cask "vlc"
+cask "whatsapp"
+cask "zoom"
 cask "zotero"
 mas "DevCleaner", id: 1388020431
+mas "GarageBand", id: 682658836
 mas "Grammarly for Safari", id: 1462114288
 mas "Honey", id: 1472777122
 mas "Icon Set Creator", id: 939343785
 mas "Icon Set Studio", id: 1501296766
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Speedtest", id: 1153157709
 mas "Trello", id: 1278508951
 mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
