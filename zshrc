@@ -11,11 +11,11 @@ if [ -f ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before
 fi
 
-# Zsh configuration before
-source ~/.zsh/config_before.zsh
-
 # Bootstrap
 source ~/.shell/bootstrap.sh
+
+# Zsh configuration before
+source ~/.zsh/config_before.zsh
 
 # External settings
 source ~/.shell/external.sh

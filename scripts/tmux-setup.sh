@@ -2,7 +2,7 @@
 
 BASE_SESSION="terminal"
 
-CURRENT_SESSIONS=$(/usr/local/bin/tmux list-sessions 2> /dev/null | grep "^$BASE_SESSION\(-\d\)\?: .*\$" | awk '{print $1}' | sed 's/.$//')
+CURRENT_SESSIONS=$(/opt/homebrew/bin/tmux list-sessions 2> /dev/null | grep "^$BASE_SESSION\(-\d\)\?: .*\$" | awk '{print $1}' | sed 's/.$//')
 
 # Determine name of session (terminal or terminal-n)
 if [ -n "$CURRENT_SESSIONS" ]; then
@@ -16,15 +16,15 @@ fi
 rm -f ~/.tmux-saves/"$SESSION_NAME"
 
 # Start session (with message if there are detached sessions)
-if /usr/local/bin/tmux list-sessions 2> /dev/null | grep -vq '^.* (attached)$'; then
-    /usr/local/bin/tmux new -s "$SESSION_NAME" \; setenv SESSION_NAME "$SESSION_NAME" \; display-message "WARNING: detached sessions" > /dev/null 2>&1
+if /opt/homebrew/bin/tmux list-sessions 2> /dev/null | grep -vq '^.* (attached)$'; then
+    /opt/homebrew/bin/tmux new -s "$SESSION_NAME" \; setenv SESSION_NAME "$SESSION_NAME" \; display-message "WARNING: detached sessions" > /dev/null 2>&1
 else
-    /usr/local/bin/tmux new -s "$SESSION_NAME" \; setenv SESSION_NAME "$SESSION_NAME" > /dev/null 2>&1
+    /opt/homebrew/bin/tmux new -s "$SESSION_NAME" \; setenv SESSION_NAME "$SESSION_NAME" > /dev/null 2>&1
 fi
 
-# After exiting, kill session if it is not attached or liste in ~/.tmux-saves/
-if [ ! -f ~/.tmux-saves/"$SESSION_NAME" ] && ! /usr/local/bin/tmux list-sessions | grep -q "^$SESSION_NAME: .* (attached)\$"; then
-    /usr/local/bin/tmux kill-session -t "$SESSION_NAME" > /dev/null 2>&1
+# After exiting, kill session if it is not attached or listed in ~/.tmux-saves/
+if [ ! -f ~/.tmux-saves/"$SESSION_NAME" ] && ! /opt/homebrew/bin/tmux list-sessions | grep -q "^$SESSION_NAME: .* (attached)\$"; then
+    /opt/homebrew/bin/tmux kill-session -t "$SESSION_NAME" > /dev/null 2>&1
     echo "[kill session $SESSION_NAME]"
 else
     echo "[detach from $SESSION_NAME]"

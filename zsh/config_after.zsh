@@ -8,4 +8,4 @@ alias src='omz reload'
 # ZSH_TMUX_ITERM2=true
 
 # awscli autocomplete
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C '/opt/homebrew/bin/aws_completer' aws

@@ -149,7 +149,7 @@ autocmd FileType markdown,text setlocal spell
 " -------
 
 "  FZF
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)

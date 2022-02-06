@@ -68,15 +68,15 @@ alias ela='exa -la'
 alias elah='exa -lah'
 
 # Homebrew aliases
-alias brepo='cd /usr/local/Homebrew'
-alias bcore='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/'
-alias bcask='cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/'
+alias brepo='cd /opt/homebrew'
+alias bcore='cd /opt/homebrew/Library/Taps/homebrew/homebrew-core/'
+alias bcask='cd /opt/homebrew/Library/Taps/homebrew/homebrew-cask/'
 cdb() {
     cd "$(brew --repository $1)"
 }
 alias cdbl='cd $(brew --repository)/Library/Homebrew'
-alias cellar='cd /usr/local/Cellar/'
-alias caskroom='cd /usr/local/Caskroom/'
+alias cellar='cd /opt/homebrew/Cellar/'
+alias caskroom='cd /opt/homebrew/Caskroom/'
 alias bcleanup='brew bundle cleanup'
 alias baudit='brew audit --strict --online --git'
 

@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-HOMEBREW_INSTALL_FROM_API=1 exec "/usr/local/bin/brew" "$@"
+HOMEBREW_INSTALL_FROM_API=1 exec "/opt/homebrew/bin/brew" "$@"

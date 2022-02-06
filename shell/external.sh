@@ -31,7 +31,7 @@ export HOMEBREW_GITHUB_PACKAGES_USER="Rylan12"
 export HOMEBREW_BAT_CONFIG_PATH="$BAT_CONFIG_PATH"
 
 # Setup rbenv
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
 eval "$(rbenv init -)"
 
 # ZSH you-should-use show all aliases
