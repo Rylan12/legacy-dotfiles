@@ -54,10 +54,6 @@
 	path = vim/pack/vendor/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
 	ignore = untracked
-[submodule "vim/pack/vendor/start/incsearch.vim"]
-	path = vim/pack/vendor/start/incsearch.vim
-	url = https://github.com/haya14busa/incsearch.vim.git
-	ignore = untracked
 [submodule "vim/pack/vendor/start/incsearch-fuzzy.vim"]
 	path = vim/pack/vendor/start/incsearch-fuzzy.vim
 	url = https://github.com/haya14busa/incsearch-fuzzy.vim
@@ -111,3 +107,7 @@
 [submodule "vim/pack/vendor/start/vim-javascript"]
 	path = vim/pack/vendor/start/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/pack/vendor/start/is.vim"]
+	path = vim/pack/vendor/start/is.vim
+	url = https://github.com/haya14busa/is.vim.git
+    ignore = untracked

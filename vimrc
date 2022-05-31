@@ -184,22 +184,22 @@ if has('python3')
 endif
 
 " Incsearch
-let g:incsearch#auto_nohlsearch = 1
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map z/ <Plug>(incsearch-fuzzy-/)
-map z? <Plug>(incsearch-fuzzy-?)
-map zg/ <Plug>(incsearch-fuzzy-stay)
-map <Space>/ <Plug>(incsearch-easymotion-/)
-map <Space>? <Plug>(incsearch-easymotion-?)
-map <Space>g/ <Plug>(incsearch-easymotion-stay)
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+" let g:incsearch#auto_nohlsearch = 1
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
+" map z/ <Plug>(incsearch-fuzzy-/)
+" map z? <Plug>(incsearch-fuzzy-?)
+" map zg/ <Plug>(incsearch-fuzzy-stay)
+" map <Space>/ <Plug>(incsearch-easymotion-/)
+" map <Space>? <Plug>(incsearch-easymotion-?)
+" map <Space>g/ <Plug>(incsearch-easymotion-stay)
+" map n  <Plug>(incsearch-nohl-n)
+" map N  <Plug>(incsearch-nohl-N)
+" map *  <Plug>(incsearch-nohl-*)
+" map #  <Plug>(incsearch-nohl-#)
+" map g* <Plug>(incsearch-nohl-g*)
+" map g# <Plug>(incsearch-nohl-g#)
 
 " Limelight
 nmap <Leader>l :Limelight!!<CR>
