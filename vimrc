@@ -12,7 +12,6 @@ set splitbelow " New window appears below
 set splitright " New window appears to the right
 
 
-
 " ----------
 " Appearance
 " ----------
@@ -81,7 +80,7 @@ set hlsearch " Highlight all instances found in search
 " Keybindings
 " -----------
 
-" Don't enter Ex mode when pressing Q 
+" Don't enter Ex mode when pressing Q
 nmap Q <Nop>
 
 " Make jj in insert mode escape to normal mode
