@@ -19,16 +19,16 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/batconfig"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Homebrew
-export HOMEBREW_DEVELOPER=1
-export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
 export HOMEBREW_BAT=1
-export HOMEBREW_BOOTSNAP=1
-export HOMEBREW_PRY=1
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_FORCE_BREWED_GIT=1
-export HOMEBREW_FORCE_BREWED_CURL=1
-export HOMEBREW_GITHUB_PACKAGES_USER="Rylan12"
 export HOMEBREW_BAT_CONFIG_PATH="$BAT_CONFIG_PATH"
+export HOMEBREW_BOOTSNAP=1
+export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
+export HOMEBREW_DEVELOPER=1
+export HOMEBREW_FORCE_BREWED_CURL=1
+export HOMEBREW_FORCE_BREWED_GIT=1
+export HOMEBREW_GITHUB_PACKAGES_USER="Rylan12"
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_PRY=1
 
 # Setup rbenv
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
