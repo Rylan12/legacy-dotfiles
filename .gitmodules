@@ -62,10 +62,6 @@
 	path = vim/pack/vendor/start/incsearch-easymotion.vim
 	url = https://github.com/haya14busa/incsearch-easymotion.vim.git
 	ignore = untracked
-[submodule "vim/pack/vendor/start/syntastic"]
-	path = vim/pack/vendor/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-	ignore = untracked
 [submodule "vim/pack/vendor/start/python-syntax"]
 	path = vim/pack/vendor/start/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
