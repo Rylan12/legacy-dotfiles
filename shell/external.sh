@@ -36,6 +36,11 @@ export HOMEBREW_PRY=1
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
 eval "$(rbenv init -)"
 
+# Setup NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # ZSH you-should-use show all aliases
 # See https://github.com/MichaelAquilina/zsh-you-should-use#displaying-results
 export YSU_MODE=ALL
