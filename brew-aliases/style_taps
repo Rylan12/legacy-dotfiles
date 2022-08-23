@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew style-taps
+#:  * `style-taps` [args...]
+#:    `brew style-taps` is an alias for `brew style homebrew/core homebrew/cask homebrew/cask-versions homebrew/cask-fonts homebrew/cask-drivers`
+brew style homebrew/core homebrew/cask homebrew/cask-versions homebrew/cask-fonts homebrew/cask-drivers $*
+
