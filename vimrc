@@ -203,24 +203,6 @@ let g:SuperTabDefaultCompletionType = 'context' " Complete files after / and met
 let g:SuperTabCrMapping = 1 " Enter ends the completion menu
 let g:SuperTabClosePreviewOnPopupClose = 1 " Close the completion window that vim opens when done
 
-" Syntastic
-let g:syntastic_error_symbol = 'x'
-let g:syntastic_warning_symbol = "!"
-let g:syntastic_style_error_symbol = 's'
-let g:syntastic_style_warning_symbol = "s"
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-    \ 'mode': 'passive',
-    \ 'active_filetypes': ['sh', 'python', 'zsh'],
-    \ 'passive_filetypes': []
-\}
-nnoremap <Leader>sc :SyntasticCheck<CR>
-nnoremap <Leader>sr :SyntasticReset<CR>
-nnoremap <Leader>si :SyntasticInfo<CR>
-nnoremap <Leader>sm :SyntasticToggleMode<CR>
-
 
 " --------------------
 " Local customizations
