@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+curl --silent -H "Authorization: Bearer $YALIES_API_TOKEN" -X POST https://yalies.io/api/people -H "Content-Type: application/json" -d "{\"query\":\"$1\"}" | jq . -C | less
