@@ -25,6 +25,7 @@ alias dev='cd ~/Development/'
 alias doc='cd ~/Documents/'
 alias dow='cd ~/Downloads/'
 alias hom='cd ~/Development/homebrew/'
+alias cpsc='cd ~/Development/CPSC-323-Assignments/'
 work() {
     WORKSPACE_DIR=~/Development/vscode-workspaces/
     [[ $# -eq 0 ]] && cd $WORKSPACE_DIR && return
