@@ -103,6 +103,14 @@ jview() {
     fi
 }
 
+# View formula/cask metadata easily
+fj() {
+    jview "https://formulae.brew.sh/api/formula/${1}.json"
+}
+cj() {
+    jview "https://formulae.brew.sh/api/cask/${1}.json"
+}
+
 # Extract tar from URL
 extract() {
     curl "$1" | tar xf -
