@@ -46,3 +46,6 @@ export YSU_MODE=ALL
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Setup GitHub copilot CLI
+eval "$(github-copilot-cli alias -- "$0")"
