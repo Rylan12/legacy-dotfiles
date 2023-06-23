@@ -16,6 +16,9 @@ alias gdp='git diff --patience'
 alias gdm='git dm'
 alias grhhh='git reset --hard HEAD'
 
+# ESP-IDF alias
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
 # jq aliases
 alias jqc='jq -C'
 
