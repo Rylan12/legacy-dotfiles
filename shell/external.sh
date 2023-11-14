@@ -19,7 +19,6 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/batconfig"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Homebrew
-export HOMEBREW_ANALYTICS_ENABLE_INFLUX=1
 export HOMEBREW_AUTOREMOVE=1
 export HOMEBREW_BAT=1
 export HOMEBREW_BAT_CONFIG_PATH="$BAT_CONFIG_PATH"
