@@ -39,7 +39,8 @@ work() {
 
     open "$WORKSPACE_FILE"
 }
-alias cs480='cd "$HOME/Documents/Yale/CPSC 480/Workspace.nosync" && source venv/bin/activate'
+alias cs480='cd "$HOME/Documents/Yale/CPSC 480/Workspace.nosync/" && source venv/bin/activate'
+alias ee428='cd "$HOME/Development/EENG-428/"'
 
 # reload current directory
 alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
