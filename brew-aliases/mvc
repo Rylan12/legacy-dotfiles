@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew mvc
+#:  * `mvc` [args...]
+#:    `brew mvc` is an alias for `brew move-core-cask`
+brew move-core-cask $*
+
