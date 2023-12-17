@@ -39,7 +39,7 @@ work() {
 
     open "$WORKSPACE_FILE"
 }
-alias cs480='cd "$HOME/Documents/Yale/CPSC 480/Workspace.nosync/" && source venv/bin/activate'
+alias cs480='cd "$HOME/Development/CPSC-480-Final-Project/"'
 alias ee428='cd "$HOME/Development/EENG-428/"'
 
 # reload current directory
