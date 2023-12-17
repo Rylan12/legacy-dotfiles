@@ -8,6 +8,7 @@ do
                                      -e 's|^Formula/||' \
                                      -e 's|^Casks/||' \
                                      -e 's/\.rb//' \
+                                     -e 's|^./||' \
                                      -e 's/$/: /')"
   git add "$FILENAME"
   git commit "$FILENAME" --message="${MESSAGE}${*}"
