@@ -69,13 +69,13 @@ alias rpvw='gh repo view -w' # open repo in web browser
 # Pipe to clipboard
 alias pb='pbcopy'
 
-# exa aliases
-alias e='exa'
-alias ea='exa -a'
-alias el='exa -l'
-alias elh='exa -lh'
-alias ela='exa -la'
-alias elah='exa -lah'
+# eza aliases
+alias e='eza'
+alias ea='eza -a'
+alias el='eza -l'
+alias elh='eza -lh'
+alias ela='eza -la'
+alias elah='eza -lah'
 
 # Homebrew aliases
 alias brepo='cd /opt/homebrew'
