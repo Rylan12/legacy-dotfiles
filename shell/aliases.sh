@@ -42,8 +42,7 @@ work() {
 
     open "$WORKSPACE_FILE"
 }
-alias cs480='cd "$HOME/Development/CPSC-480-Final-Project/"'
-alias ee428='cd "$HOME/Development/EENG-428/"'
+alias cs420='cd "$HOME/Development/CPSC-420/"'
 
 # reload current directory
 alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
