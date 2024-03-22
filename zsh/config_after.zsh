@@ -9,3 +9,6 @@ alias src='omz reload'
 
 # awscli autocomplete
 complete -C '/opt/homebrew/bin/aws_completer' aws
+
+# Setup GitHub copilot CLI
+eval "$(gh copilot alias -- zsh)"
