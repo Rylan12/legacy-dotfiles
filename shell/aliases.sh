@@ -42,7 +42,9 @@ work() {
 
     open "$WORKSPACE_FILE"
 }
+alias me390='cd "$HOME/Development/MENG-390L/"'
 alias cs420='cd "$HOME/Development/CPSC-420/"'
+alias cs520='cd "$HOME/Development/CPSC520/"'
 
 # reload current directory
 alias reload='[[ ! -d "$(pwd)" ]] && echo "$(pwd) no longer exists" && return 1 || cd "$(pwd)"'
@@ -91,6 +93,9 @@ alias baudit='brew audit --strict --online --git'
 
 # GitKraken
 alias kraken='git kraken'
+
+# Download youtube video as wav file
+alias ytwav='yt-dlp --extract-audio --audio-format wav'
 
 # View contents of file
 view() {
