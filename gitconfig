@@ -8,6 +8,10 @@
 	sync = !git pull --rebase upstream master && git push origin master
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
+    hide = update-index --skip-worktree
+    unhide = update-index --no-skip-worktree
+    unhide-all = !git ls-files -v | grep '^S' | cut -c3- | xargs git unhide --
+    show-hidden = !git ls-files -v | grep '^S' | cut -c3-
 [color]
 	ui = auto
 [commit]
