@@ -2,10 +2,9 @@
 " General
 " -------
 
-set nocompatible " Not vi compatible
 set hidden " Allow hidden buffers
-set noerrorbells visualbell t_vb= " Disable audible bell because it's annoying.
-set mouse+=a " Enable mouse support
+set noerrorbells visualbell " Disable audible bell because it's annoying.
+set mouse+=a " Enable mouse support in all modes
 set ttimeoutlen=10 " Remove delay when pressing <Esc>
 set updatetime=100 " Update more quickly
 set splitbelow " New window appears below
@@ -20,16 +19,17 @@ set wildmenu " Show autocomplete for commands
 set showcmd " Show commands for some actions
 set laststatus=2 " Always show the status line
 set number " Show line numbers.
-set relativenumber " Show relative numbers
 set noshowmode " Don't show current mode (shown in lightline plugin)
 set ruler " Show mouse position on status line
 
+if !has('nvim')
 colorscheme snazzy
 let g:lightline = {'colorscheme': 'snazzy'} " Status bar theme
 " Load status bar setup
 let $STATUSFILE=expand("~/.vim/status-config.vim")
 if filereadable($STATUSFILE)
     source $STATUSFILE
+endif
 endif
 
 
@@ -40,7 +40,7 @@ endif
 set wrap " Enable line wrapping
 set linebreak " Won't linebreak in the middle of a word
 set backspace=indent,eol,start " Allow backspace past insert point and over new line
-set scrolloff=3 " Keep 5 lines under cursor at top and bottom of screen
+set scrolloff=3 " Keep 3 lines around cursor at top and bottom of screen
 
 
 " ----------------------
@@ -62,10 +62,6 @@ set smartindent " Determine indent level intelligently
 set shiftround " Shifting rounds to multiple of 'shiftwidth'
 set smarttab " TAB inserts 'tabstop' number of spaces
 
-" Code Folding
-set foldlevel=20 " Have most folds open on start
-set nofoldenable
-
 
 " ------
 " Search
@@ -80,14 +76,6 @@ set hlsearch " Highlight all instances found in search
 " Keybindings
 " -----------
 
-" Don't enter Ex mode when pressing Q
-nmap Q <Nop>
-
-" Make jj in insert mode escape to normal mode
-imap jj <Esc>
-
-nnoremap ; :
-
 " Use <C-direction> to navigate between windows instead of <C-W>direction
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -99,16 +87,6 @@ nnoremap <C-t>j :tabr<CR>
 nnoremap <C-t>k :tabl<CR>
 nnoremap <C-t>l :tabn<CR>
 nnoremap <C-t>h :tabp<CR>
-
-" Don't let arrow keys move to force the use of hjkl (normal and insert mode)
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Common mistyped commands
 command! WQ wq
@@ -146,6 +124,8 @@ autocmd FileType markdown,text setlocal spell
 " -------
 " Plugins
 " -------
+
+if !has('nvim')
 
 "  FZF
 set rtp+=/opt/homebrew/opt/fzf
@@ -202,6 +182,33 @@ let g:SimpylFold_docstring_preview = 1
 let g:SuperTabDefaultCompletionType = 'context' " Complete files after / and methods after .
 let g:SuperTabCrMapping = 1 " Enter ends the completion menu
 let g:SuperTabClosePreviewOnPopupClose = 1 " Close the completion window that vim opens when done
+endif
+
+
+" --------------------------
+" Neovim-Specific Configuration
+" --------------------------
+
+if has('nvim')
+    " Interface directly with the system keyboard
+    set clipboard+=unnamedplus
+
+    " Setup providers
+    let g:python3_host_prog = "~/.pyenv/versions/neovim/bin/python"
+    let g:ruby_host_prog = "~/.rbenv/versions/3.2.2/bin/neovim-ruby-host"
+    let g:node_host_prog = "~/.nvm/versions/node/v16.16.0/bin/neovim-node-host"
+    let g:perl_host_prog = "/opt/homebrew/bin/perl"
+endif
+
+
+" --------------------------
+" Vim-Specific Configuration
+" --------------------------
+
+if !has('nvim')
+    set nocompatible " Not vi compatible
+    set t_vb= " Disable audible bell
+endif
 
 
 " --------------------
